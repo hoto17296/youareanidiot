@@ -1,0 +1,12 @@
+{
+  "name": "youareanidiot",
+  "version": "0.1.0",
+  "description": "you are an idiot",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^1.7.9"
+  }
+}
