@@ -6,8 +6,8 @@ let quit = false
 
 function createWindow () {
   const win = new electron.BrowserWindow({
-    width: 480,
-    height: 360,
+    width: 240,
+    height: 180,
     useContentSize: true,
     resizable: false,
     fullscreen: false,
