@@ -4,6 +4,10 @@ const path = require('path')
 
 let quit = false
 
+function choiceRandom(arr) {
+  return arr[Math.floor(Math.random() * arr.length)]
+}
+
 function createWindow () {
   const win = new electron.BrowserWindow({
     width: 240,
@@ -15,7 +19,8 @@ function createWindow () {
 
   win.loadURL('file://' + path.join(__dirname, 'index.html'))
 
-  let [dx, dy] = [10, 10]
+  let dx = choiceRandom([-20, -10, 10, 20])
+  let dy = choiceRandom([-20, -10, 10, 20])
 
   const interval = setInterval(() => {
     if (win.isDestroyed()) {
