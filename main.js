@@ -2,6 +2,8 @@ const electron = require('electron')
 
 const path = require('path')
 
+const FPS = 60
+
 let quit = false
 
 function choiceRandom(arr) {
@@ -42,7 +44,7 @@ function createWindow () {
     if (margin.left + dx < 0 || margin.right - dx < 0) dx *= -1
     if (margin.top + dy < 0 || margin.bottom - dy < 0) dy *= -1
     win.setPosition(winPos[0] + dx, winPos[1] + dy)
-  }, 10)
+  }, 1000 / FPS)
 
   win.on('close', (event) => {
     if (!quit) {
